@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Gestione presenze</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    </head>
+
+    <body>
+        <header>
+            <header>
+                <!--Navbar xs & sm & md-->
+                <nav class="navbar navbar-expand-lg navbar-dark bg-dark d-lg-none">
+                    <div class="container-fluid">
+                        <a class="navbar-brand h1" href="./index.html">Digitazon</a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <!--min 992px change-->
+                        <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
+                            <ul class="navbar-nav">
+                                <li class="nav-item">
+                                    <div class="">
+                                        <a href="./gestione_presenze.html" class=""><button
+                                                class="btn bg-transparent text-white  container-lg">Gestione
+                                                presenze</button></a>
+                                        <a href="./storico.html"><button
+                                                class="btn bg-transparent text-white  container-lg">Storico
+                                                presenze</button></a>
+                                        <a href="./index.html"><button
+                                                class="btn bg-transparent text-white  container-lg">Torna
+                                                alla Home</button></a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+                <!--Navbar lg & xl-->
+                <!--Add hover-details-->
+                <nav class="navbar navbar-dark bg-dark d-none d-lg-flex">
+                    <div class="container-fluid">
+                        <a class="navbar-brand h1 justify-content-center" href="./index.html">Digitazon</a>
+                        <div class="container col-10">
+                            <span class="container col-4"><a href="#" class="text-white-50">Home</a></span>
+                            <span class="container col-4"><a href="#" class="text-white-50">Gestione presenze</a></span>
+                            <span class="container col-4"><a href="#" class="text-white-50">Segnala presenza</a></span>
+                        </div>
+                    </div>
+                </nav>
+            </header>
+            <main class="bg-dark p-3 ">
+                <form class="container bg-white border rounded-3 p-3 col-xs-12 col-sm-10 col-md-6 col-lg-4 needs-validation" novalidate>
+                    <h2 class="mb-5"> Form presenza giornaliera</h2>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text" id="basic-addon1">Data</span>
+                        <input type="date" class="form-control" placeholder="" aria-label="Username" aria-describedby="basic-addon1">
+                    </div>
+                    <div class="mb-3">
+                        <input type="radio" class="btn-check" name="options-outlined" id="Presente" autocomplete="off">
+                        <label class="btn btn-outline-success" for="Presente">Presente</label>
+                        <input type="radio" class="btn-check" name="options-outlined" id="Ridotto" autocomplete="off">
+                        <label class="btn btn-outline-warning" for="Ridotto">Tempo ridotto</label>
+                        <input type="radio" class="btn-check" name="options-outlined" id="Assente" autocomplete="off">
+                        <label class="btn btn-outline-danger" for="Assente">Assente</label>
+                    </div>
+                    <div class="input-group mb-3">
+                        <label class="btn btn-outline-success" type="btn-check" id="button-addon1" >Entrata in ritardo alle </label>
+                        <input type="time" class="form-control" placeholder="">
+                    </div>
+                    <div class="input-group mb-3">
+                        <label class="btn btn-outline-danger" type="btn-check" id="button-addon1">Uscita in anticipo alle </label>
+                        <input type="time" class="form-control" placeholder="">
+                    </div>
+
+                    <div><button class="btn btn-primary gap-3 " type="submit">Submit form</button></div>
+
+
+
+                </form>
+            </main>
+            <footer></footer>
+
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+                integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+                crossorigin="anonymous">
+            </script>
+    </body>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous">
+    </script>
+
+</html>
