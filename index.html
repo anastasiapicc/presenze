@@ -12,7 +12,8 @@
 <body>
     <header>
         <!--Navbar xs & sm & md-->
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark d-lg-none">
+        <nav
+            class="navbar navbar-expand-lg navbar-dark bg-dark d-lg-none  border-opacity-25 border-bottom border-opacity-25 border-white">
             <div class="container-fluid">
                 <a class="navbar-brand h1" href="./index.html">Digitazon</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -31,8 +32,8 @@
                                 <a href="./storico.html"><button
                                         class="btn bg-transparent text-white  container-lg">Storico
                                         presenze</button></a>
-                                <a href="./index.html"><button class="btn bg-transparent text-white  container-lg">Torna
-                                        alla Home</button></a>
+                                <a href="./login.html"><button class="btn bg-transparent text-white  container-lg">Torna
+                                        al Login</button></a>
                             </div>
                         </li>
                     </ul>
@@ -41,7 +42,8 @@
         </nav>
         <!--Navbar lg & xl-->
         <!--Add hover-details-->
-        <nav class="navbar navbar-dark bg-dark d-none d-lg-flex">
+        <nav
+            class="navbar navbar-dark bg-dark d-none d-lg-flex border-opacity-25 border-bottom border-opacity-25 border-white">
             <div class="container-fluid">
                 <a class="navbar-brand h1 justify-content-center" href="./index.html">Digitazon</a>
                 <div class="container col-10">
@@ -52,45 +54,107 @@
             </div>
         </nav>
     </header>
-    <main class="container-fluid bg-dark" style="height: 100vh;">
+    <main class="d-flex flex-column bg-dark" style="height: 90vh;">
         <section id="title-screen">
             <!--Titolo-->
-            <div class="d-flex col-sm-8 justify-content-center">
-                <div class="container"></div>
+            <div class="d-flex col-sm-8 justify-content-center" style="height: 30vh;">
+                <span class="d-flex align-self-center h1 text-white text-center">Digitazon Tech School</span>
             </div>
         </section>
-        <section id="status-screen">
+        <section id="status-screen" class="d-flex flex-column align-items-center justify-content-between"
+            style="height: 30%;">
             <!--Login Status-->
-            <div class="container col-10">
-                <div class="container-fluid">
-                    <p class="text-white">Benvenuto/a <span class="fw-bold">nome</span></p>
-                </div>
-                <div class="container col-10">
-                    <p class="text-white">Attualmente risulti:</p>
-                    <div class="d-flex justify-content-center">
-                        <p class="h2 text-white text-center bg-success rounded" style="width: 50%;">STATO</p>
+            <div class="container-fluid">
+                <p class="text-white text-center">Benvenuto/a <span class="fw-bold">nome</span></p>
+            </div>
+            <div class="container col-10" style="height: 70%;">
+                <!--Login status for xs & sm & md-->
+                <div class="row justify-content-around align-content-center border rounded" style="height: 70%;">
+                    <p class="text-white text-center h4 ">Stato:</p>
+                    <!--Caso Presente-->
+                    <div class="d-flex align-self-center justify-content-center">
+                        <span
+                            class="d-flex align-self-center justify-content-center h2 text-white bg-success rounded m-0 w-50">PRESENTE</span>
                     </div>
+                    <!--Caso Assente-->
+                    <!-- <div class="d-flex align-self-center justify-content-center">
+                        <span
+                            class="d-flex align-self-center justify-content-center h2 text-white bg-danger rounded m-0 w-50">ASSENTE</span>
+                    </div> -->
+                    <!--Caso Ridotto-->
+                    <!-- <div class="d-flex align-self-center justify-content-center">
+                        <span
+                            class="d-flex align-self-center justify-content-center h2 text-white bg-warning rounded m-0 w-50">RIDOTTO</span>
+                    </div> -->
                 </div>
+                <!------------DA IMPLEMENTARE Login status lg--------------->
             </div>
         </section>
-        <section id="shortcut-presenza">
+        <section id="shortcut-presenza" style="height: 35%;">
             <!--Segnala Presenza-->
-            <div class="container col-10 border rounded">
-                <div class="row">
-                    <p class="text-white ">Segnala la tua presenza qui:</p>
-                    <a href="./gestione_presenze.html">
-                        <button class="btn text-white bg-transparent border">Presente!</button>
-                    </a>
+            <div class="container col-10 border rounded" style="height: 55%;">
+                <div class="d-flex flex-column justify-content-evenly align-items-center" style="height: 90%;">
+                    <div class="row align-content-center justify-content-center">
+                        <p class="d-flex w-100 text-white ">Segnala la tua presenza qui:</p>
+                    </div>
+                    <div class="row">
+                        <!--Potrebbe sia rimandare alla pagina per gestire le presenze, sia inviare lo stato di presenza. Come se fosse una shortcut-->
+                        <a href="./gestione_presenze.html">
+                            <button class="btn text-white bg-transparent border">Presente!</button>
+                        </a>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
     <footer class="">
-        <nav>
-            <button></button>
-            <button></button>
-            <button></button>
+        <!--Footer xs & sm & md-->
+        <nav
+            class="navbar navbar-dark bg-dark d-lg-none border-opacity-25 border-top border-opacity-25 border-white justify-content-evenly fixed-bottom">
+            <div id="gestione-button">
+                <div class="row justify-content-center">
+                    <a href="./gestione_presenze.html"> <img class="w-auto ps-2" src="./assets/img/assessment-white.png"
+                            alt="storico_presenze_icon"></a>
+                </div>
+                <div class="row justify-content-center"><span class="text-white" style="font-size: xx-small;">Gestione presenze</span></div>
+            </div>
+            <div id="home-button">
+                <div class="row justify-content-center">
+                    <a href="./index.html"> <img class="w-auto" src="./assets/img/home-white.png"
+                            alt="storico_presenze_icon"></a>
+                </div>
+                <div class="row justify-content-center"><span class="text-white text-center" style="font-size: xx-small;">Home</span></div>
+            </div>
+            <div id="history-button">
+                <div class="row justify-content-center">
+                    <a href="./storico.html"> <img class="w-auto" src="./assets/img/history-white.png"
+                            alt="storico_presenze_icon"></a>
+                </div>
+                <div class="row justify-content-center"><span class="text-white" style="font-size: xx-small;">Storico
+                        presenza</span></div>
+            </div>
         </nav>
+        <!------------DA IMPLEMENTARE Footer lg ---------------------------->
+        <!-- <nav
+            class="navbar navbar-dark bg-dark d-lg-flex border-opacity-25 border-top border-opacity-25 border-white justify-content-evenly fixed-bottom">
+            <div>
+                <div class="row justify-content-center"><img class="w-auto" src="./assets/img/assessment-white.png"
+                        alt="gestione_presenze_icon"></div>
+                <div class="row"><span class="text-white" style="font-size: xx-small;">Gestione presenze</span></div>
+            </div>
+            <div>
+                <div class="row justify-content-center"><img class="w-auto" src="./assets/img/home-white.png"
+                        alt="home_icon"></div>
+                <div class="row justify-content-center"><span class="text-white text-center "
+                        style="font-size: xx-small;">Home</span></div>
+            </div>
+            <div>
+                <div class="row justify-content-center"><img class="w-auto" src="./assets/img/history-white.png"
+                        alt="storico_presenze_icon"></div>
+                <div class="row justify-content-center"><span class="text-white" style="font-size: xx-small;">Segnala
+                        presenza</span></div>
+            </div>
+        </nav> -->
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
