@@ -13,8 +13,8 @@
     <header>
         <!--Navbar xs & sm & md-->
         <nav
-            class="navbar navbar-expand-lg navbar-dark bg-dark d-lg-none  border-opacity-25 border-bottom border-opacity-25 border-white">
-            <div class="container-fluid">
+            class="navbar navbar-expand-lg navbar-dark bg-dark d-lg-none border-opacity-25 border-bottom border-opacity-25 border-white">
+            <div class="container-fluid ps-3 ">
                 <a class="navbar-brand h1" href="./index.html">Digitazon</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false"
@@ -54,17 +54,28 @@
             </div>
         </nav>
     </header>
-    <main class="d-flex flex-column bg-dark" style="height: 90vh;">
-        <section id="title-screen">
-            <!--Titolo-->
-            <div class="d-flex col-sm-8 justify-content-center" style="height: 30vh;">
-                <span class="d-flex align-self-center h1 text-white text-center">Digitazon Tech School</span>
+    <main class="d-flex flex-column bg-dark" style="height: 91vh;">
+        <section id="title">
+            <div id="title-screen">
+                <!-- Titolo xs & sm & md -->
+                <div class="d-lg-none d-flex justify-content-center" style="height: 30vh;">
+                    <span class="d-flex align-self-center h1 text-white text-center">Digitazon Tech School</span>
+                </div>
+                <!-- Titolo xs & sm & md -->
+                <div class="d-none d-lg-flex justify-content-center" style="height: 30vh;">
+                    <span class="d-flex align-self-center justify-content-center h1 w-50 text-white text-center" style="font-size: 5rem;">
+                        Digitazon Tech School
+                    </span>
+                </div>
+                
             </div>
         </section>
-        <section id="status-screen" class="d-flex flex-column align-items-center justify-content-between"
+
+        <!-------------- Dashboard body xs & sm $ md-------------->
+        <div id="status-screen" class="d-flex d-lg-none flex-column align-items-center justify-content-between"
             style="height: 30%;">
             <!--Login Status-->
-            <div class="container-fluid">
+            <div id="welcome" class="container-fluid">
                 <p class="text-white text-center">Benvenuto/a <span class="fw-bold">nome</span></p>
             </div>
             <div class="container col-10" style="height: 70%;">
@@ -89,8 +100,8 @@
                 </div>
                 <!------------DA IMPLEMENTARE Login status lg--------------->
             </div>
-        </section>
-        <section id="shortcut-presenza" style="height: 35%;">
+        </div>
+        <div id="shortcut-presenza" class="d-lg-none" style="height: 35%;">
             <!--Segnala Presenza-->
             <div class="container col-10 border rounded" style="height: 55%;">
                 <div class="d-flex flex-column justify-content-evenly align-items-center" style="height: 90%;">
@@ -105,6 +116,60 @@
                     </div>
                 </div>
             </div>
+        </div>
+
+        <!------------ Dashboard body lg & xl----------------------->
+        <section id="dashboard-body-lg" class="d-none d-lg-flex flex-column" style="height: 60vh">
+            <div id="welcome-lg" class="container-fluid" style="height: 20%;">
+                <p class="text-white text-center" style="font-size: x-large;">Benvenuto/a <span
+                        class="fw-bold">nome</span></p>
+            </div>
+            <div id="dashboard-content-lg" class="d-flex justify-content-evenly gap-5 p-5" style="height: 70%;">
+                <!--|-->
+                <!--v-->
+                <div id="status-screen-lg" class="d-flex flex-grow-1 align-items-center justify-content-between">
+                    <div id="status-content-lg" class="container" style="height: 100%;">
+                        <div class="d-flex gap-4 flex-column justify-content-center align-content-center border rounded"
+                            style="height: 100%;">
+                            <p class="text-white text-center h4 ">Attualmente risulti come:</p>
+                            <!--Caso Presente-->
+                            <div class="d-flex align-self-center justify-content-center bg-success rounded w-50">
+                                <span class="d-flex align-self-center justify-content-center m-0 h2 text-white rounded">
+                                    PRESENTE
+                                </span>
+                            </div>
+                            <!--           | | |   Per schermi lg e xl , dato l'enorme spazio vuoto si potrebbero-->
+                            <!--Altri casi v v v   inserire tutti e 3 facendo "illuminare" lo stato attuale     -->
+                            <!--Caso Assente-->
+                            <div class="d-flex align-self-center justify-content-center bg-danger rounded w-50">
+                                <span class="d-flex align-self-center justify-content-center m-0 h2 text-white rounded">
+                                    ASSENTE
+                                </span>
+                            </div>
+                            <!--Caso Ridotto-->
+                            <div class="d-flex align-self-center justify-content-center bg-warning rounded w-50">
+                                <span class="d-flex align-self-center justify-content-center m-0 h2 text-white rounded">
+                                    RIDOTTO
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="shortcut-presenza-lg" class="container col-6">
+                    <div class="d-flex gap-4 flex-column justify-content-center align-items-center border rounded" style="height: 100%;">
+                        <div class="d-flex align-content-center justify-content-around ">
+                            <p class="d-flex w-75 fs-5 text-white text-center ">Se non lo hai già fatto, ti
+                                raccomandiamo di segnalare la tua presenza, puoi farlo da qui:</p>
+                        </div>
+                        <div class="d-flex w-50 justify-content-center ">
+                            <!--Potrebbe sia rimandare alla pagina per gestire le presenze, sia inviare lo stato di presenza. Come se fosse una shortcut-->
+                            <a href="./gestione_presenze.html">
+                                <button class="btn text-white bg-transparent border-success fs-3">Presente!</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
     <footer class="">
@@ -116,14 +181,16 @@
                     <a href="./gestione_presenze.html"> <img class="w-auto ps-2" src="./assets/img/assessment-white.png"
                             alt="storico_presenze_icon"></a>
                 </div>
-                <div class="row justify-content-center"><span class="text-white" style="font-size: xx-small;">Gestione presenze</span></div>
+                <div class="row justify-content-center"><span class="text-white" style="font-size: xx-small;">Gestione
+                        presenze</span></div>
             </div>
             <div id="home-button">
                 <div class="row justify-content-center">
                     <a href="./index.html"> <img class="w-auto" src="./assets/img/home-white.png"
                             alt="storico_presenze_icon"></a>
                 </div>
-                <div class="row justify-content-center"><span class="text-white text-center" style="font-size: xx-small;">Home</span></div>
+                <div class="row justify-content-center"><span class="text-white text-center"
+                        style="font-size: xx-small;">Home</span></div>
             </div>
             <div id="history-button">
                 <div class="row justify-content-center">
@@ -135,7 +202,8 @@
             </div>
         </nav>
         <!------------DA IMPLEMENTARE Footer lg ---------------------------->
-        <nav class="navbar navbar-dark bg-dark d-none d-lg-flex border-opacity-25 border-top border-opacity-25 border-white justify-content-evenly fixed-bottom" style="height: 5vh;">
+        <nav class="navbar navbar-dark bg-dark d-none d-lg-flex border-opacity-25 border-top border-opacity-25 border-white justify-content-evenly fixed-bottom"
+            style="height: 5vh;">
             <p class="text-white-50 m-0" style="font-size: small;">Copyright to Digitazon</p>
         </nav>
     </footer>
